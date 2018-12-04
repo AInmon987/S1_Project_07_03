@@ -5,8 +5,8 @@
    Tutorial 5
    Case Problem 3
    
-   Author:   
-   Date:      
+   Author: Austin Inmon  
+   Date:  11.30.18    
    
    Filename: cw_styles.css
 
@@ -17,7 +17,7 @@
 
 
 /* Import Basic Design Styles  */
-
+@import url("cw_designs.css");
 
 
 /* ===============================
@@ -31,7 +31,7 @@
 	Mobile Styles up to 480 pixels
    ===============================
 */
-	
+
 
 
 
@@ -39,4 +39,3 @@
 	Tablet and Desktop Devices: 481px or more 
    ============================================
 */
-

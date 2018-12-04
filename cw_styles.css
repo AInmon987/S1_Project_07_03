@@ -17,6 +17,7 @@
 
 
 /* Import Basic Design Styles  */
+/* The rule is calling the designs css style sheet to display on the web page.  */
 @import url("cw_designs.css");
 
 
@@ -24,6 +25,20 @@
 	General Styles for All Devices
    ===============================
 */
+/* The rule is for the navigation and has an id of bottom and the rule is making the the bottom nav a flexbox and doesnt have wrap.  */
+nav#bottom {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+/* The rule is for the unordered list thats in the navigation with the id of bottom and the rule is making the growth rate shrink rate both 1 and the basis 150 pixels.  */
+nav#bottom>ul {
+    -webkit-flex: 1 1 150px;
+    flex: 1 1 150px;
+}
 
 
 
@@ -31,6 +46,91 @@
 	Mobile Styles up to 480 pixels
    ===============================
 */
+@media only screen and (max-width: 480px) {
+
+    /* The rule is for the body and the rule is making the text white, and the background color.  */
+    body {
+        color: rgb(211, 211, 211);
+        background-color: rgb(51, 51, 51);
+    }
+
+    /* The rule is for the aside, images that are in the article and the whole section with the id of spotlight not show on mobile styles.  */
+    aside,
+    article>img,
+    section#spotlight {
+        display: none;
+    }
+
+    /* The rule is for the unordered list thats nested in the navigation with the id of top and the rule is making the nav a flexbox.  */
+    nav#top ul {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
+
+    /* The rule is for the list items thats in the unordered list that is in the navigation with the id of top and the rule is aking the font size 2.2 3m and the growth/shrink rate is 1 and the basis is 130 pixels.  */
+    nav#top ul li {
+        font-size: 2.2em;
+        -webkit-flex: 1 1 130px;
+        flex: 1 1 130px;
+    }
+
+    /* The rule is foe the list item background thats nested in the unordered list that is in the navigation with id of top and the rule is making the background an image.  */
+    nav#top ul li:nth-of-type(1) {
+        background-image: url("cw_image01.png");
+        width: 100%;
+    }
+
+    /* The rule is foe the list item background thats nested in the unordered list that is in the navigation with id of top and the rule is making the background an image.  */
+    nav#top ul li:nth-of-type(2) {
+        background-image: url("cw_image02.png");
+        width: 100%;
+    }
+
+    /* The rule is foe the list item background thats nested in the unordered list that is in the navigation with id of top and the rule is making the background an image.  */
+    nav#top ul li:nth-of-type(3) {
+        background-image: url("cw_image03.png");
+        width: 100%;
+    }
+
+    /* The rule is foe the list item background thats nested in the unordered list that is in the navigation with id of top and the rule is making the background an image.  */
+    nav#top ul li:nth-of-type(4) {
+        background-image: url("cw_image04.png");
+        width: 100%;
+    }
+
+    /* The rule is foe the list item background thats nested in the unordered list that is in the navigation with id of top and the rule is making the background an image.  */
+    nav#top ul li:nth-of-type(5) {
+        background-image: url("cw_image05.png");
+        width: 100%;
+    }
+
+    /* The rule is foe the list item background thats nested in the unordered list that is in the navigation with id of top and the rule is making the background an image.  */
+    nav#top ul li:nth-of-type(6) {
+        background-image: url("cw_image06.png");
+        width: 100%;
+    }
+
+    /* The rule is for the paragraph element that has the id of links and the rule is making the element flexbox and has wraps.  */
+    p#links {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    /* The rule is for the anchors thats nested in the paragraph tag that has id of links and the rule is making the text white, the background color is red, the border radius 20 pixels, and no text-decoration.  */
+    p#links>a {
+        color: white;
+        background-color: rgb(220, 27, 27);
+        border-radius: 20px;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+}
 
 
 
@@ -39,3 +139,50 @@
 	Tablet and Desktop Devices: 481px or more 
    ============================================
 */
+@media only screen and (min-width: 481px) {
+
+    /* The rule is for the body and the rule makes the body a flex-box and gives the body wrapping.  */
+    body {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
+
+    /* The rule is for the article and the rule makes growth rate 2 shrink rate 1 and a basis of 400 pixels. */
+    article {
+        -webkit-flex: 2 1 400px;
+        flex: 2 1 400px;
+    }
+
+    /* The rule is for the aside and the rule makes growth rate 1 shrink rate 2 and a basis of 200 pixels.  */
+    aside {
+        -webkit-flex: 1 2 200px;
+        flex: 1 2 200px;
+    }
+
+    /* The rule is fo the unordered list that is nested in the nav with the id of top and the rule is making the nav flexbox with background color, a height of 50 pixels, and makes the content horizontal and vertical centered.  */
+    nav#top ul {
+        -webkit-display: flex;
+        display: flex;
+        background-color: rgb(51, 51, 51);
+        height: 50px;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    /* The rule is for the list items thats in the the unordered list that is in the nav with the id of top and the rule is giving a growth rate of 0 shrink rate of 1 and basis of 180 pixels.  */
+    nav#top ul li {
+        -webkit-flex: 0 1 80px;
+        flex: 0 1 80px;
+
+    }
+
+    /* The style rule is for the anchor links and the rule is saying to not show the links while in desktop screen.  */
+    p#links {
+        display: none;
+    }
+
+}
